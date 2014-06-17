@@ -1,0 +1,273 @@
+
+
+#reasons
+  .container
+    padding-top: 75px
+    padding-bottom: 45px
+
+  span.apice
+    vertical-align: super
+    font-size: px-to-em(12px,16px)
+  h2
+    font-size: px-to-em(18px,16px)
+    font-weight: bold
+    color: #38b994
+    margin: 0 0 1em 0
+  p
+    font-size: px-to-em(14px,14px)
+    color: #d9ece4
+    line-height: px-to-em(20px,14px)
+    +pre(1,10)
+    padding-top: columns(1)
+    padding-bottom: columns(1)
+    +span-columns(8 ,10)
+    position: relative
+    z-index: 2
+  .box
+    clear: both
+    background-color: #27BA97
+    position: relative
+    z-index: 2
+    +span-columns(10,10)
+    +border-top-right-radius(100px)
+  span.corner
+    background-image: image-url("visual_green-triangle.png")
+    width: image-width("visual_green-triangle.png")
+    height: image-height("visual_green-triangle.png")
+    position: absolute
+    top: 0
+    right: 0
+
+  img
+    width: 100%
+    height: auto
+    margin-top: 20px
+#reason1
+  background-color: #F3F0DD
+#reason2
+  background-color: #F3F3F4
+#reason3
+  background-color: #E8E7DF
+#reason4
+  background-color: #F3F3F4
+#reason5
+  background-color: #F3F0DD
+#reason6
+  background-color: #F3F3F4
+#reason7
+  background-color: #D9EDE6
+#reason8
+  background-color: #F3F0DD
+#reason9
+  background-color: #F3F3F4
+#reason10
+  background-color: #E8E7DF
+
+.my-tooltip-theme
+  border-radius: 0
+  border: 0
+  background: #25A27E
+  color: #d9ece4
+
+
+.my-tooltip-theme .tooltipster-content
+  font-size: 14px
+  line-height: 16px
+  padding: 10px 14px
+  max-width: 300px
+
++at-breakpoint($break3)
+
+  #reasons
+    .container
+      position: relative
+      padding-top: 95px
+      padding-bottom: 45px
+    
+    .box
+      +span-columns(8,16)
+
+    h2
+      font-size: px-to-em(22px,16px)
+      +span-columns(6,16)
+      margin: 45px 0 32px 0
+    p
+      font-size: px-to-em(14px,16px)
+      line-height: px-to-em(24px,16px)
+      +pre(1,8)
+
+      +span-columns(6 ,8)
+
+    span.corner
+      background-image: image-url("visual_green-triangle.png")
+      width: image-width("visual_green-triangle.png")
+      height: image-height("visual_green-triangle.png")
+    a.active
+      span.dot1
+        background-image: image-url("visual_overdot1.png")
+        width: image-width("visual_overdot1.png")
+        height: image-height("visual_overdot1.png")
+    a.active
+      span.dot2
+        background-image: image-url("visual_overdot2.png")
+        width: image-width("visual_overdot2.png")
+        height: image-height("visual_overdot2.png")
+    a.active
+      span.dot3
+        background-image: image-url("visual_overdot3.png")
+        width: image-width("visual_overdot3.png")
+        height: image-height("visual_overdot3.png")
+    a.active
+      span.dot4
+        background-image: image-url("visual_overdot4.png")
+        width: image-width("visual_overdot4.png")
+        height: image-height("visual_overdot4.png")
+    a.active
+      span.dot5
+        background-image: image-url("visual_overdot5.png")
+        width: image-width("visual_overdot5.png")
+        height: image-height("visual_overdot5.png")
+    a.active
+      span.dot6
+        background-image: image-url("visual_overdot6.png")
+        width: image-width("visual_overdot6.png")
+        height: image-height("visual_overdot6.png")
+    a.active
+      span.dot7
+        background-image: image-url("visual_overdot7.png")
+        width: image-width("visual_overdot7.png")
+        height: image-height("visual_overdot7.png")
+    a.active
+      span.dot8
+        background-image: image-url("visual_overdot8.png")
+        width: image-width("visual_overdot8.png")
+        height: image-height("visual_overdot8.png")
+    a.active
+      span.dot9
+        background-image: image-url("visual_overdot9.png")
+        width: image-width("visual_overdot9.png")
+        height: image-height("visual_overdot9.png")
+    a.active
+      span.dot10
+        background-image: image-url("visual_overdot10.png")
+        width: image-width("visual_overdot10.png")
+        height: image-height("visual_overdot10.png")
+
+    span.dot1
+      background-image: image-url("visual_dot1.png")
+      width: image-width("visual_dot1.png")
+      height: image-height("visual_dot1.png")
+      &:hover
+        background-image: image-url("visual_overdot1.png")
+        width: image-width("visual_overdot1.png")
+        height: image-height("visual_overdot1.png")
+    span.dot2
+      background-image: image-url("visual_dot2.png")
+      width: image-width("visual_dot2.png")
+      height: image-height("visual_dot2.png")
+      &:hover
+        background-image: image-url("visual_overdot2.png")
+        width: image-width("visual_overdot2.png")
+        height: image-height("visual_overdot2.png")
+    span.dot3
+      background-image: image-url("visual_dot3.png")
+      width: image-width("visual_dot3.png")
+      height: image-height("visual_dot3.png")
+      &:hover
+        background-image: image-url("visual_overdot3.png")
+        width: image-width("visual_overdot3.png")
+        height: image-height("visual_overdot3.png")
+    span.dot4
+      background-image: image-url("visual_dot4.png")
+      width: image-width("visual_dot4.png")
+      height: image-height("visual_dot4.png")
+      &:hover
+        background-image: image-url("visual_overdot4.png")
+        width: image-width("visual_overdot4.png")
+        height: image-height("visual_overdot4.png")
+    span.dot5
+      background-image: image-url("visual_dot5.png")
+      width: image-width("visual_dot5.png")
+      height: image-height("visual_dot5.png")
+      &:hover
+        background-image: image-url("visual_overdot5.png")
+        width: image-width("visual_overdot5.png")
+        height: image-height("visual_overdot5.png")
+    span.dot6
+      background-image: image-url("visual_dot6.png")
+      width: image-width("visual_dot6.png")
+      height: image-height("visual_dot6.png")
+      &:hover
+        background-image: image-url("visual_overdot6.png")
+        width: image-width("visual_overdot6.png")
+        height: image-height("visual_overdot6.png")
+    span.dot7
+      background-image: image-url("visual_dot7.png")
+      width: image-width("visual_dot7.png")
+      height: image-height("visual_dot7.png")
+      &:hover
+        background-image: image-url("visual_overdot7.png")
+        width: image-width("visual_overdot7.png")
+        height: image-height("visual_overdot7.png")
+    span.dot8
+      background-image: image-url("visual_dot8.png")
+      width: image-width("visual_dot8.png")
+      height: image-height("visual_dot8.png")
+      &:hover
+        background-image: image-url("visual_overdot8.png")
+        width: image-width("visual_overdot8.png")
+        height: image-height("visual_overdot8.png")
+    span.dot9
+      background-image: image-url("visual_dot9.png")
+      width: image-width("visual_dot9.png")
+      height: image-height("visual_dot9.png")
+      &:hover
+        background-image: image-url("visual_overdot9.png")
+        width: image-width("visual_overdot9.png")
+        height: image-height("visual_overdot9.png")
+    span.dot10
+      background-image: image-url("visual_dot10.png")
+      width: image-width("visual_dot10.png")
+      height: image-height("visual_dot10.png")
+      &:hover
+        background-image: image-url("visual_overdot10.png")
+        width: image-width("visual_overdot10.png")
+        height: image-height("visual_overdot10.png")
+    #reason1
+      span.back
+        background-color: #F3F0DD
+    #reason2
+      span.back
+        background-color: #F3F3F4
+    #reason3
+      span.back
+        background-color: #E8E7DF
+    #reason4
+      span.back
+        background-color: #F3F3F4
+    #reason5
+      span.back
+        background-color: #F3F0DD
+    #reason6
+      span.back
+        background-color: #F3F3F4
+    #reason7
+      span.back
+        background-color: #D9EDE6
+    #reason8
+      span.back
+        background-color: #F3F0DD
+    #reason9
+      span.back
+        background-color: #F3F3F4
+    #reason10
+      span.back
+        background-color: #E8E7DF
+
+    img
+      +span-columns(10 omega,16)
+
+      margin-top: 50px
+      position: absolute
+      top: 45px
+      right: 0

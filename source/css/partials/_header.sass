@@ -1,0 +1,220 @@
+#header
+  width: 100%
+  background-color: #27A27E
+  position: fixed
+  height: 40px
+  display: block
+  z-index: 9
+  top: 0
+#menu-wide
+  display: none
+#menu-top
+  display: none
+#menu
+  display: none
+  +span-columns(10,10)
+  .landing-menu
+    +span-columns(8,10)
+    padding-top: 3px
+    a
+      text-decoration: none
+      color: #0F6948
+      height: 35px
+      padding-top: 5px
+      +span-columns(4,10)
+    span.logo-mise
+      +replace-text-with-dimensions("visual3_mise-logo.png")
+      +span-columns(2,4)
+    span.txt
+      font-size: px-to-em(12px,16px)
+      word-wrap: normal
+      +span-columns(2 omega,4)
+  .side-menu
+    +float-right()
+    display: inline
+    width: 44px
+    background-color: #15906E
+    +bleed(0.625em, right)
+
+    ul
+      +horizontal-list-container
+      text-align: center
+      li
+        +horizontal-list-item(4px)
+
+
+    a
+      text-decoration: none
+    .m-pikabu-nav-toggle
+      position: relative
+      float: right
+      display: block
+      width: 25px
+      height: 30px
+      text-indent: 100%
+      white-space: nowrap
+      color: #ffffff
+      line-height: 29px
+      margin: 5px 0
+    .m-pikabu-nav-toggle::after
+      content: '☰'
+      position: absolute
+      left: 0
+      top: 0
+      display: block
+      width: 100%
+      height: 100%
+      font-family: "entypo", sans-serif
+      text-align: center
+      text-indent: 0
+      font-size: 25px
+      font-weight: bold
+      color: inherit
+
++at-breakpoint($break3)
+  #header
+    height: 60px
+
+  #menu-wide
+    display: none
+  #menu-top
+    display: none
+  #menu
+    display: none
+
+  #menu-wide
+    +span-columns(16,16)
+    height: 60px
+
+    .landing-menu
+      +span-columns(12,16)
+      padding-top: 3px
+
+    .topbox
+      +span-columns(6,12)
+      position: relative
+      &.last
+        +omega()
+      a
+        +span-columns(6,6)
+        text-decoration: none
+        height: 60px
+        padding-top: 5px
+        position: relative
+        color: #0F6948
+    span.logo-mise
+      +replace-text-with-dimensions("visual_logo-mise.png")
+      display: inline-block
+      position: absolute
+      left: 0
+    span.txt
+
+      font-size: px-to-em(12px,16px)
+      word-wrap: normal
+      +span-columns(5,6)
+      font-style: italic
+      font-weight: 200
+      position: relative
+      +pre(1,6)
+      line-height: 42px
+    .side-menu
+      +span-columns(4 omega,16)
+      background-color: #15906E
+      height: 60px
+
+
+      a
+        text-decoration: none
+        color: white
+        display: inline-block
+        text-align: center
+        line-height: 60px
+        +span-columns(2,4)
+        &:last-child
+          +span-columns(2 omega,4)
+        &:hover, &:active
+          background-color: #eb5353
+  #menu-top
+    height: 60px
+    +span-columns(16,16)
+    .topbox
+      a
+        text-decoration: none
+        +span-columns(5,27)
+        position: relative
+        +bleed(gutter(27),right)
+
+        &:hover
+          background-color: #eb5353
+        &.active
+          background-color: #eb5353
+
+      h3
+        color: white
+        font-weight: normal
+        text-transform: uppercase
+        font-size: px-to-em(14px,16px)
+        line-height: px-to-em(16px,16px)
+        margin-top: 15px
+        +span-columns(5,27)
+    .side-menu
+      +span-columns(4 omega,16)
+      background-color: #15906E
+      height: 60px
+
+
+      a
+        text-decoration: none
+        color: white
+        display: inline-block
+        text-align: center
+        line-height: 60px
+        +span-columns(2,4)
+        &:last-child
+          +span-columns(2 omega,4)
+        &:hover, &:active
+          background-color: #eb5353
+  .icon
+    display: inline-block
+    +float-left
+    position: relative
+    margin-right: gutter(5)
+  #topbox0
+    .icon
+      width: image-width("visual_homeicon-normal.png")
+      height: image-height("visual_homeicon-normal.png")
+      background: image-url("visual_homeicon-normal.png") no-repeat center center
+      margin-right: 0
+      a
+        text-decoration: none
+        +span-columns(1,20)
+        position: relative
+        +bleed(0)
+    .icon:hover 
+      width: image-width("visual_homeicon-over.png")
+      height: image-height("visual_homeicon-over.png")
+      background: image-url("visual_homeicon-over.png") no-repeat center center
+
+
+
+  #topbox1
+    .icon
+      width: image-width("visual_smallicon-reasons.png")
+      height: image-height("visual_smallicon-reasons.png")
+      background: image-url("visual_smallicon-reasons.png") no-repeat center center
+  #topbox2
+    .icon
+      width: image-width("visual_smallicon-process.png")
+      height: image-height("visual_smallicon-process.png")
+      background: image-url("visual_smallicon-process.png") no-repeat center center
+
+  #topbox3
+    .icon
+      width: image-width("visual_smallicon-storage.png")
+      height: image-height("visual_smallicon-storage.png")
+      background: image-url("visual_smallicon-storage.png") no-repeat center center
+  #topbox4
+    .icon
+      width: image-width("visual_smallicon-map.png")
+      height: image-height("visual_smallicon-map.png")
+      background: image-url("visual_smallicon-map.png") no-repeat center center

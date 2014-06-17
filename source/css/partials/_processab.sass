@@ -1,0 +1,116 @@
+#processa, #processb
+  .line
+    border-bottom: 1px solid white
+    position: relative
+  h2
+    color: white
+
+    +span-columns(10,10)
+    margin-bottom: 0
+    margin-top: 0
+    font-size: px-to-em(14px,16px)
+
+  a
+    color: white
+    &:hover
+      color: #15906e
+  
+  .button
+    +span-columns(10,10)
+  a.summary
+    padding: 20px 40px
+    background: #15906e
+    color: white
+    text-align: center
+    margin: 0 auto
+    width: 307px
+    display: block
+    text-decoration: none
+    &:hover
+      background: #eb5353
+
+
+  h3
+    color: white
+    font-size: px-to-em(16px,16px)
+    +span-columns(10,10)
+    margin-bottom: 0
+    margin-top: 0
+  .box ul, p
+    +span-columns(6,10)
+    +pre(3)
+    margin-top: 0
+  .box ul
+    padding: 0 0 0 14px
+
+  .box li,p
+    font-size: px-to-em(12px,16px)
+    font-weight: bold
+    color: #d9ece4
+
+  span.txt
+    padding-top: 20px
+    display: inline-block
+
+  span.docs-icon
+    width: image-width("mobile/visual3_docs-icon.png")
+    height: image-height("mobile/visual3_docs-icon.png")
+    +span-columns(3,10)
+    background: image-url("mobile/visual3_docs-icon.png") no-repeat center center
+  span.paperplane-icon
+    width: image-width("mobile/visual3_paperplane-icon.png")
+    height: image-height("mobile/visual3_paperplane-icon.png")
+    +span-columns(3,10)
+    background: image-url("mobile/visual3_paperplane-icon.png") no-repeat center center
+  span.mailbox-icon
+    width: image-width("mobile/visual3_mailbox-icon.png")
+    height: image-height("mobile/visual3_mailbox-icon.png")
+    +span-columns(3,10)
+    background: image-url("mobile/visual3_mailbox-icon.png") no-repeat center center
+
++at-breakpoint($break3)
+  #processa, #processb
+    .container
+      position: relative
+      padding-top: 95px
+      padding-bottom: 45px
+    h2
+      margin-bottom: 15px
+      margin-top: 20px
+      font-weight: normal
+      text-align: left
+      font-size: px-to-em(20px,14px)
+
+      span
+        font-weight: bold
+    h3.subtitle
+      margin-bottom: 40px
+      margin-top: 15px
+      font-weight: normal
+      text-align: left
+      font-size: px-to-em(18px,14px)
+    .line
+      +span-columns(2,16)
+
+    .spacer
+      +pre(1)
+      +span-columns(15,16)
+    .box
+      +span-columns(5,15)
+    .box:nth-child(3)
+      +omega
+
+    .box li,p
+      font-size: px-to-em(14px,16px)
+      color: #d9ece4
+    .box ul, p
+      margin-top: 40px
+      +span-columns(5,5)
+      +pre(0)
+
+    span.txt
+      font-size: px-to-em(18px,16px)
+      font-weight: bold
+      +span-columns(3 omega,5)
+    span.docs-icon,span.paperplane-icon,span.mailbox-icon
+      +span-columns(2,5)

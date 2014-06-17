@@ -1,0 +1,31 @@
+#main-content
+  position: relative
+  width: 100%
+  background-color: #27BA97
+
+.slides-menu
+  position: absolute
+  top: 35px
+  width: 100%
+  .container
+    position: relative
+  .fullPage-slidesNav.top
+    +span-columns(10,10)
+    top: 10px
+  .controlArrow
+    z-index: 2
+    display: none
+
+.bkgr
+  +stretch(0,0,0,0)
+  background-color: #27BA97
+
++at-breakpoint($break3)
+
+  .slides-menu
+    top: 55px
+    .fullPage-slidesNav.top
+      +span-columns(8,16)
+    .controlArrow
+      display: block
+

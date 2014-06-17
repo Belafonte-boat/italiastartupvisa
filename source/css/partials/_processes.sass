@@ -1,0 +1,79 @@
+#processes
+  a
+    text-decoration: none
+    display: block
+    &:hover
+      background-color: #eb5353
+    &:active
+      background-color: #eb5353
+    +span-columns(10,10)
+  .box
+    +span-columns(10,10)
+
+  h2
+    color: #fff
+    text-align: center
+    +span-columns(8,10)
+    +pre(1,10)
+    font-weight: normal
+    line-height: 30px
+
+
+  p
+    text-align: center
+    color: #fff
+    font-size: px-to-em(14px,16px)
+    line-height: px-to-em(16px,16px)
+
+    +span-columns(8,10)
+    +pre(1,10)
+  span.arrow
+    position: relative
+    clear: both
+    width: image-width("visual_down-arrow.png")
+    height: image-height("visual_down-arrow.png")
+    display: block
+    margin: 0 auto
+    background: image-url("visual_down-arrow.png") no-repeat center center
+
++at-breakpoint($break3)
+  #processes
+    .container
+      position: relative
+      padding-top: 95px
+      padding-bottom: 45px
+    p#or
+      width: 20px
+      height: 20px
+      position: absolute
+      margin: 0 0 0 -10px
+      padding: 0
+      margin-top: 70px
+      left: 50%
+      font-style: italic
+      text-align: center
+    a
+      +span-columns(7,16)
+      &.first
+        +pre(1)
+      padding-bottom: 30px
+    .line
+      +span-columns(1,7)
+      +pre(3,7)
+
+      border-bottom: 1px solid white
+      position: relative
+
+    h2
+      +span-columns(6,7)
+      +pre(1)
+      height: 50px 
+    p
+      +span-columns(6,7)
+      +pre(1)
+      padding-top: 1em
+      padding-bottom: 1em
+      height: 30px
+    a:hover
+      span.arrow
+        background: image-url("visual_down-arrow-over.png") no-repeat center center

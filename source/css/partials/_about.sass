@@ -1,0 +1,67 @@
+#about
+  background: #27BA97
+  .container
+    padding-top: 50px
+    padding-bottom: 70px
+  .content
+    position: relative
+    z-index: 2
+    +span-columns(10,10)
+  img
+    width: 100%
+    height: auto
+    vertical-align: middle
+  h1
+    color: white
+    font-size: px-to-em(26px,16px)
+    line-height: px-to-em(20px,16px)
+  p
+    color: #D9EDE5
+    font-size: px-to-em(16px,16px)
+    line-height: px-to-em(18px,16px)
+  a
+    color: white
+    text-decoration: underline
+    font-weight: bold
+    &:hover
+      color: #15906E
+
++at-breakpoint($break3)
+  #about
+    .container
+      position: relative
+      padding-top: 95px
+      padding-bottom: 45px
+
+    .left
+      +span-columns(6,16)
+      +pre(1,16)
+      
+    .image1
+      +pre(1)
+      +float-left
+      display: inline
+      width: columns(4,16)+(gutter(16)/2)
+    .image2
+      +float-left
+      display: inline
+      width: columns(4,16)+(gutter(16)/2)
+    .image3
+      +pre(1)
+      +float-left
+      display: inline
+      width: columns(8,16)
+    .image5
+      +pre(1)
+      +float-left
+      display: inline
+      width: columns(4,16)+(gutter(16)/2)
+    .image6
+      +pre(1)
+      +float-left
+      display: inline
+      width: columns(8,16)
+    .image4
+      +float-left
+      display: inline
+      width: columns(4,16)+(gutter(16)/2)

@@ -1,0 +1,62 @@
+@import compass/utilities/sprites
+@import compass/typography
+@import h5bp
+@import susy
+@import compass/typography/vertical_rhythm
+@import compass/support
+@import compass/css3
+@import compass/layout/stretching
+
+
++h5bp-normalize
++establish-baseline
+
+$legacy-support-for-ie: true
+
+
+
+
+@import partials/custom_mixins
+@import partials/grid
+
+@import "partials/vendor/tooltipster"
+
+*:focus
+  outline-style: none
+  outline-width: 0px
+
+
+
+@import partials/header
+@import partials/main-content
+@import partials/footer
+@import partials/reasons
+@import partials/landing
+@import partials/about
+@import partials/processes
+@import partials/processab
+@import partials/vendor/pikabu
+@import partials/sidebar
+@import partials/filingcabinet
+@import partials/credits
+//@import partials/vendor/pikabu-theme
+
+.hyphenate
+  +hyphenation
+
+.slimScrollDiv, .scrollable
+  -webkit-overflow-scrolling: touch
+#locale
+  display: none
+
+.container
+  +container($total-columns, $break1, $break2, $break3)
+
+h1,h2,h3,h4,h5,h6,p,span,textarea,input
+  font-family: 'Open Sans', sans-serif
+html
+  height: 100%
+body
+  background-color: #27BA97
+  min-height: 100%
+
