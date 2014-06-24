@@ -8,6 +8,7 @@
 //= require "enquire/dist/enquire.min"
 //= require "tooltipster/js/jquery.tooltipster.min"
 //= require "vendor/jquery-ui"
+//= require "vendor/jquery.tap"
 
 /**
  * Created with JetBrains RubyMine.
@@ -45,7 +46,69 @@ enquire
         // OPTIONAL
         // If supplied, triggered once, when the handler is registered.
         setup : function() {
+            $(document).ready(function() {
+                $("a.menu1 .hider .scroller .icon").on('tap',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var scroller = $(this).parent();
+                        var icon = $(this);
+                        var height = icon.height();
+                        scroller.animate({
+                            top: "-=" + height,
+                        }, 400);
+                    });
 
+                $("a.menu2 .hider .scroller .icon").on('tap',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var scroller = $(this).parent();
+                        var icon = $(this);
+                        var height = icon.height();
+                        scroller.animate({
+                            top: "-=" + height,
+                        }, 400);
+                    });
+                $("a.menu3 .hider .scroller .icon").on('tap',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var scroller = $(this).parent();
+                        var icon = $(this);
+                        var height = icon.height();
+                        scroller.animate({
+                            top: "-=" + height,
+                        }, 400);
+                    });
+                $("a.menu4 .hider .scroller .icon").on('tap',
+                    function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var scroller = $(this).parent();
+                        var icon = $(this);
+                        var height = icon.height();
+                        scroller.animate({
+                            top: "-=" + height,
+                        }, 400);
+                    });
+                $("a.menu1").on('tap',function (e) {
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo("10reasons-section");
+                });
+                $("a.menu2").on('tap',function (e) {
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo("processes-section");
+                });
+                $("a.menu3").on('tap',function (e) {
+                    e.preventDefault();
+                    window.location = "/filingcabinet.html";
+                });
+                $("a.menu4").on('tap',function (e) {
+                    e.preventDefault();
+                    window.location = "/map.php";
+                });
+            });
 
             pikabu = new Pikabu({ widths: {
 
@@ -146,7 +209,118 @@ enquire
         $(document).ready(function(){
             
             $( "#accordion" ).accordion({header:".question",heightStyle: "content"});
+            $("a.menu1").hover(
 
+                function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "-="+height,
+                    }, 400 );
+                }, function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "+="+height,
+                    }, 400 );
+                }
+
+
+            );
+
+            $("a.menu2").hover(
+
+                function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "-="+height,
+                    }, 400 );
+                }, function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "+="+height,
+                    }, 400 );
+                }
+
+
+            );
+
+            $("a.menu3").hover(
+
+                function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "-="+height,
+                    }, 400 );
+                }, function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "+="+height,
+                    }, 400 );
+                }
+
+
+            );
+
+            $("a.menu4").hover(
+
+                function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "-="+height,
+                    }, 400 );
+                }, function(e) {
+                    e.preventDefault();
+                    var scroller = $(this).find("div.scroller");
+                    var icon = $(this).find("img.icon");
+                    var height = icon.height();
+                    scroller.animate({
+                        top: "+="+height,
+                    }, 400 );
+                }
+
+
+            );
+
+            $("a.menu1").click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveTo("10reasons-section");
+            });
+            $("a.menu2").click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveTo("processes-section");
+            });
+            $("a.menu3").click(function(e){
+                e.preventDefault();
+                window.location = "/filingcabinet.html";
+            });
+            $("a.menu4").click(function(e){
+                e.preventDefault();
+                window.location = "/map.php";
+            });
+            $("a#topbox1").click(function(e){
+                e.preventDefault();
+                window.location = "/map.php";
+            });
 
             if($("#about").length > 0 || $("#contacts").length > 0 || $("#filingcabinet").length > 0){
                 $("#menu-top").fadeIn();
@@ -219,118 +393,9 @@ $(document).ready(function(){
     $("a.menu3 div.hider").height($("a.menu3 img.icon").height());
     $("a.menu4 div.hider").height($("a.menu4 img.icon").height());
 
-    $("a.menu1").hover(
-
-        function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "-="+height,
-            }, 400 );
-        }, function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "+="+height,
-            }, 400 );
-        }
 
 
-    );
 
-    $("a.menu2").hover(
-
-        function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "-="+height,
-            }, 400 );
-        }, function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "+="+height,
-            }, 400 );
-        }
-
-
-    );
-
-    $("a.menu3").hover(
-
-        function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "-="+height,
-            }, 400 );
-        }, function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "+="+height,
-            }, 400 );
-        }
-
-
-    );
-
-    $("a.menu4").hover(
-
-        function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "-="+height,
-            }, 400 );
-        }, function(e) {
-            e.preventDefault();
-            var scroller = $(this).find("div.scroller");
-            var icon = $(this).find("img.icon");
-            var height = icon.height();
-            scroller.animate({
-                top: "+="+height,
-            }, 400 );
-        }
-
-
-    );
-
-    $("a.menu1").click(function(e){
-        e.preventDefault();
-        $.fn.fullpage.moveTo("10reasons-section");
-    });
-    $("a.menu2").click(function(e){
-        e.preventDefault();
-        $.fn.fullpage.moveTo("processes-section");
-    });
-    $("a.menu3").click(function(e){
-        e.preventDefault();
-        window.location = "/filingcabinet.html";
-    });
-    $("a.menu4").click(function(e){
-        e.preventDefault();
-        window.location = "/map.php";
-    });
-    $("a#topbox1").click(function(e){
-        e.preventDefault();
-        window.location = "/map.php";
-    });
 
 });
 
