@@ -1,13 +1,15 @@
 #processa, #processb
+
   .line
     border-bottom: 1px solid white
     position: relative
+    +span-columns(2,16)
   h2
     color: white
 
     +span-columns(10,10)
     margin-bottom: 0
-    margin-top: 0
+    margin-top: 30px
     font-size: px-to-em(14px,16px)
 
   a
@@ -17,17 +19,19 @@
   
   .button
     +span-columns(10,10)
+    background: #15906e
+    &:hover
+      background: #eb5353
   a.summary
     padding: 20px 40px
-    background: #15906e
+
     color: white
     text-align: center
     margin: 0 auto
     width: 307px
-    display: block
+    display: inline
     text-decoration: none
-    &:hover
-      background: #eb5353
+
 
 
   h3
@@ -71,6 +75,7 @@
 +at-breakpoint($break3)
   #processa, #processb
     .container
+      margin-top: 0
       position: relative
       padding-top: 95px
       padding-bottom: 45px
@@ -89,8 +94,7 @@
       font-weight: normal
       text-align: left
       font-size: px-to-em(18px,14px)
-    .line
-      +span-columns(2,16)
+
 
     .spacer
       +pre(1)

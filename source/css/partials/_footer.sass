@@ -11,6 +11,10 @@
 #info
   +span-columns(10,10)
   position: relative
+  p.contacts
+    display: none
+  p.credits
+    display: none
   p
     color: white
     height: 35px
@@ -20,9 +24,7 @@
   a
     text-decoration: none
     color: white
-    text-decoration: none
-    color: white
-    display: block
+    display: inline-block
   span.txt
     vertical-align: middle
     display: inline-block
@@ -38,11 +40,13 @@
     position: relative
     z-index: 2
   p.contacts
+    display: none
     text-align: center
     position: absolute
     top: 5px
     width: 100%
   p.credits
+    display: none
     text-align: right
     position: absolute
     top: 5px
@@ -51,3 +55,11 @@
     a
       text-decoration: underline
       color: white
+
+
++at-breakpoint($break3)
+  #info
+    p.contacts
+      display: inline
+    p.credits
+      display: inline

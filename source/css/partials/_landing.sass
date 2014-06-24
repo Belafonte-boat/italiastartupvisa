@@ -9,17 +9,28 @@
     +span-columns(10,10)
     margin: 0
     font-weight: normal
+    line-height: px-to-em(14px,16px)
   h2
     text-align: justify
     color: white
     +span-columns(10,10)
     font-weight: normal
+    font-size: px-to-em(12px,16px)
+    line-height: px-to-em(15px,16px)
+
+
   h3#mainslogan
     text-align: justify
     color: white
 
     +span-columns(10,10)
     font-weight: bold
+    font-size: px-to-em(12px,16px)
+    line-height: px-to-em(16px,16px)
+    a
+      color: white
+      &:hover
+        color: #15906e
   .line
     +span-columns(2,10)
     +pre(4,10)
@@ -37,7 +48,7 @@
 
   .scroller
     position: relative
-    height: image-height("visual3_storage-icon.png")*2
+
   a
     text-decoration: none
   img
@@ -65,7 +76,7 @@
     display: block
 
     background: image-url("visual3_arrow-small.png") no-repeat top center
-    bottom: image-height("visual3_arrow-small.png")
+
 
 +at-breakpoint($break3)
   #landing
@@ -125,6 +136,7 @@
     span.arrow
       position: relative
       +span-columns(3,3)
-      height: image-height("visual_down-arrow.png")
+      height: image-height("visual3_arrow-small.png")
 
-      background: image-url("visual_down-arrow.png") no-repeat center center
+      background: image-url("visual3_arrow-small.png") no-repeat center center
+      bottom: image-height("visual3_arrow-small.png")+5px

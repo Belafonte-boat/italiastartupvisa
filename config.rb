@@ -1,9 +1,14 @@
 require 'builder'
 require 'susy'
 
+activate :deploy do |deploy|
+  deploy.method = :ftp
+  deploy.host = "web332.webfaction.com"
+  deploy.user = "piermaria"
+  deploy.password = "Nonmelaricordo2"
+  deploy.path = "/home/piermaria/webapps/isuv"
 
-
-
+end
 
 activate :bower
 activate :automatic_image_sizes

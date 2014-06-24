@@ -1,4 +1,3 @@
-
 #filingcabinet
   background: #27BA97
   .container
@@ -30,6 +29,8 @@
     line-height: px-to-em(17px,16px)
     display: block
     position: relative
+    +span-columns(8,10)
+    margin-left: 8px
 
   .icon
     width: image-width("visual_icon-download.png")
@@ -37,6 +38,8 @@
     background: image-url("visual_icon-download.png") no-repeat center top
     display: block
     margin-left: 10px
+    +float-left
+
 
   .line
     border-bottom: 1px solid white
@@ -51,3 +54,8 @@
       padding-bottom: 45px
     .box
       +isolate-grid(6)
+    p
+      width: auto
+      margin-left: 0
+      float: none
+      display: block
