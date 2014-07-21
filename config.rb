@@ -10,6 +10,8 @@ activate :deploy do |deploy|
 
 end
 
+
+
 activate :bower
 activate :automatic_image_sizes
 activate :livereload
@@ -28,6 +30,9 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
+
+sass_options = {:sourcemap => true}
+enable_sourcemaps = true
 
 # Build-specific configuration
 configure :build do
